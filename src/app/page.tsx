@@ -6,9 +6,7 @@ import {
   Braces,
   Check,
   Code2,
-  Github,
   Layers3,
-  Linkedin,
   Mail,
   MapPin,
   MoveUpRight,
@@ -20,6 +18,7 @@ import { SiteHeader } from "@/components/site-header";
 import { ProjectCard } from "@/components/project-card";
 import { SectionHeading } from "@/components/section-heading";
 import { principles, projects, siteConfig, skillGroups } from "@/data/site";
+import { FaGithub ,FaLinkedin } from 'react-icons/fa';
 
 export default function HomePage() {
   return (
@@ -41,7 +40,7 @@ export default function HomePage() {
               </p>
               <div className="hero-actions">
                 <Link className="button button-primary" href="#work">Explore my work <ArrowDownRight size={17} /></Link>
-                <a className="button button-quiet" href={siteConfig.github} target="_blank" rel="noreferrer"><Github size={17} /> GitHub profile <ArrowUpRight size={15} /></a>
+                <a className="button button-quiet" href={siteConfig.github} target="_blank" rel="noreferrer"><FaGithub size={17} /> GitHub profile <ArrowUpRight size={15} /></a>
               </div>
               <div className="hero-traits">
                 <span><Check size={14} /> Product-minded</span>
@@ -163,8 +162,8 @@ export default function HomePage() {
               <p>I&apos;m interested in full-stack roles, thoughtful engineering teams, and projects where software makes someone&apos;s work meaningfully better.</p>
               <div className="contact-actions">
                 {siteConfig.email ? <a className="button button-primary" href={`mailto:${siteConfig.email}`}><Mail size={17} /> Get in touch <ArrowUpRight size={15} /></a> : null}
-                <a className="button button-primary" href={siteConfig.github} target="_blank" rel="noreferrer"><Github size={17} /> Connect on GitHub <ArrowUpRight size={15} /></a>
-                {siteConfig.linkedin ? <a className="button button-outline" href={siteConfig.linkedin} target="_blank" rel="noreferrer"><Linkedin size={17} /> LinkedIn <ArrowUpRight size={15} /></a> : null}
+                <a className="button button-primary" href={siteConfig.github} target="_blank" rel="noreferrer"><FaGithub size={17} /> Connect on GitHub <ArrowUpRight size={15} /></a>
+                {siteConfig.linkedin ? <a className="button button-outline" href={siteConfig.linkedin} target="_blank" rel="noreferrer"><FaLinkedin size={17} /> LinkedIn <ArrowUpRight size={15} /></a> : null}
                 {siteConfig.resumePath ? <a className="button button-outline" href={siteConfig.resumePath} target="_blank" rel="noreferrer">Resume <MoveUpRight size={15} /></a> : null}
               </div>
             </div>
